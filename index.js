@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const products = require("./data/products.js");
 
 
 
@@ -14,6 +15,10 @@ app.get("/contact", (req, res) => {
 });
 app.get("/users/:name", (req, res) => {
     res.send(`Hello World! ${req.params.name} 😊🍬`);
+});
+
+app.get("/products", (req, res) => {
+    res.send(products);
 });
 
 
